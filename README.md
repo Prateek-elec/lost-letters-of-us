@@ -1,13 +1,18 @@
-﻿# The Lost Letters of Us
+# The Lost Letters of Us
 
 A 3D web game made as a 2nd-anniversary gift for a long-distance girlfriend, Vaishali.
 She drives a pink convertible around a night-time fairy island with Prateek riding beside her.
 She solves 5 puzzles about their relationship to find 5 hidden letters, and at the end
 "The Last Door" opens and Prateek walks out of it to meet her.
 
+| | |
+|---|---|
+| <img src="docs/screenshots/01-fireworks-i-love-u.jpg" alt="Fireworks spelling I LOVE U"/> | <img src="docs/screenshots/06-waterfall-rainbow.jpg" alt="Waterfall with a rainbow"/> |
+| <img src="docs/screenshots/09-ferris-wheel-pier.jpg" alt="Ferris wheel on the pier"/> | <img src="docs/screenshots/18-ferris-ride-top.jpg" alt="At the top of the Ferris wheel"/> |
+
 > **Content:** the real story is in. It covers how they met (Banaras, the IIT Patna techfest, the
-> call on 23 October 2024), the first date, Rishikesh, Mumbai and the proposal at the Taj, with 20 real
-> photos. One detail is still a placeholder: the secret word for puzzle 5.
+> call on 23 October 2024), the first date, Rishikesh, Mumbai and the proposal at the Taj, with 20
+> photos (illustrated versions on GitHub; the real ones stay offline). One detail is still a placeholder: the secret word for puzzle 5.
 
 ---
 
@@ -233,7 +238,7 @@ Lost-Letters-of-Us/
 │   ├── world/            scenery, characters, car, meadow, fireworks, outer areas, moments, telescope…
 │   ├── ui/               panels (gallery, maps), input
 │   └── game/             interactions, audio, letters & puzzles, keepsakes, finale, walking, main loop
-├── photos/               the 20 real photos
+├── photos/               20 illustrated photos (real ones kept off GitHub)
 ├── music/                put your own songs here
 ├── screenshots/          screenshots of the main features
 ├── README.md             this file
