@@ -1,0 +1,16 @@
+Put your songs here (MP3 or M4A files), for example:  our-song.mp3
+
+Then open js/story.js, find the "music" list and add a line for each song:
+
+  music: [
+    { title: "Our song", file: "music/our-song.mp3" },
+  ],
+
+Optional: to play a special song when the Last Door opens, set
+  finaleSong: "music/our-song.mp3",
+
+Tips
+- Use simple file names without spaces (our-song.mp3, first-date.mp3).
+- Songs play in the order you list them; the jukebox in the meadow skips to the next one.
+- The dance floor follows the beat of your song.
+- Keep the game link private: songs you bought or downloaded are for your own personal use.

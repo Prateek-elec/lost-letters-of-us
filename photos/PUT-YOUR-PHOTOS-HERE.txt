@@ -1,0 +1,11 @@
+Put your photos in this folder, for example:
+  photos/1.jpg, photos/2.jpg ... photos/12.jpg   (gallery)
+  photos/goa.jpg, photos/manali.jpg ...           (map places)
+
+Then open index.html in a text editor (VS Code or Notepad), find the
+"gallery:" and "places:" sections near the top, and fill in each
+photo:"" like this:   photo:"photos/1.jpg"
+
+Photos only show up when the folder is opened from a website
+(Netlify Drop), not by double-clicking index.html. See the steps
+in the chat.

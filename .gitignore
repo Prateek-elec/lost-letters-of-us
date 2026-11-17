@@ -1,0 +1,23 @@
+# OS / editor
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp
+~$*
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+# Secrets
+.env
+*.key
+*.pem
+# Claude Code local config
+.claude/
+# Project-specific
+*.zip
+Lost-Letters-of-Us/
+
+# Real photos stay on this PC only
+private-photos/

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Lost Letters of Us</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,500&family=Caveat:wght@500;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="gl" aria-label="A fairy island of our memories"></canvas>
+  <div id="tags" class="off"></div>
+  <div id="cur" aria-hidden="true"><div class="rw"><div class="ring"></div><span class="ch">♥</span></div><div class="dot"></div></div>
+  <div id="album" aria-label="Your Polaroids"></div>
+
+  <div id="hud" class="off">
+    <div class="top">
+      <p class="brand">The Lost Letters of Us</p>
+      <div class="pieces hand" id="pieces" aria-label="Words you have found"></div>
+      <div class="icons">
+        <button class="icon" id="music" type="button" aria-label="Music on or off">♫</button>
+        <button class="icon" id="snapBtn" type="button" aria-label="Take a Polaroid photo (P)">📸</button>
+        <button class="icon" id="islmap" type="button" aria-label="Island map and teleport (M)">🗺</button>
+        <button class="icon" id="reset" type="button" aria-label="Start over">↺</button>
+      </div>
+    </div>
+    <p class="help" id="help"></p>
+    <div id="joy" aria-hidden="true"><div class="knob"></div></div>
+    <button id="interact" type="button"></button>
+    <button id="honk" type="button" aria-label="Honk the horn">♥</button>
+    <button id="boost" type="button" aria-label="Turbo boost (hold)">⚡</button>
+    <button id="walkBtn" type="button" aria-label="Get out of the car and walk (F)" title="Get out and walk together (F)">🚶</button>
+    <button id="fwSkip" type="button">End the show ×</button>
+    <button id="exitBtn" type="button">Stand up ×</button>
+    <div id="toast" aria-live="polite"></div>
+    <div id="stats" aria-live="polite"></div>
+  </div>
+
+  <section id="title">
+    <p class="for hand"></p>
+    <h1>The Lost Letters<span>of us</span></h1>
+    <p class="lede"></p>
+    <button class="btn pulse" id="start" type="button">Step onto the island</button>
+    <p class="keys" id="keys"></p>
+  </section>
+
+  <div id="scene" class="off" role="dialog" aria-modal="true">
+    <div class="sheet" id="sheet"></div>
+  </div>
+  <div id="panel" class="off" role="dialog" aria-modal="true"><div class="pbox" id="pbox"></div></div>
+  <div id="scope" class="off" role="dialog" aria-modal="true" aria-label="Telescope">
+    <canvas id="scopec"></canvas>
+    <button class="close" id="scopeX" type="button" aria-label="Close the telescope">×</button>
+    <div class="scui">
+      <p class="scevent" id="scEvent" aria-live="polite"></p>
+      <h3 id="scName"></h3>
+      <p id="scFact"></p>
+      <div class="scnav"><button id="scPrev" type="button" aria-label="Previous constellation">‹</button><span id="scCount"></span><button id="scNext" type="button" aria-label="Next constellation">›</button><button id="scSnap" type="button" aria-label="Take a Polaroid of this sky (P)" style="font-size:20px">📸</button></div>
+      <p class="schint hand" id="scLine"></p>
+    </div>
+  </div>
+  <div id="hearts"></div>
+  <div id="flash"></div>
+  <div id="snapView" class="off" role="dialog" aria-modal="true" aria-label="Polaroid">
+    <div class="svcard" id="svCard" title="Click to flip">
+      <div class="face front"><img id="svImg" alt="Polaroid photo"><p class="cap hand" id="svCap"></p></div>
+      <div class="face back"><p class="note hand" id="svNote"></p><p class="where" id="svWhere"></p></div>
+    </div>
+    <div class="svbar">
+      <button type="button" id="svPrev" aria-label="Previous photo">‹</button>
+      <button type="button" id="svFlip">↻ Flip it over</button>
+      <a id="svSave" download="our-moment.jpg">⬇ Save</a>
+      <button type="button" id="svNext" aria-label="Next photo">›</button>
+      <button type="button" id="svClose" aria-label="Close">×</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/lib/three.min.js"></script>
+<script src="js/lib/postprocessing.js"></script>
+<script src="js/story.js"></script>
+<script src="js/core/setup.js"></script>
+<script src="js/core/roads.js"></script>
+<script src="js/world/scenery.js"></script>
+<script src="js/world/characters.js"></script>
+<script src="js/world/vehicle.js"></script>
+<script src="js/world/meadow.js"></script>
+<script src="js/world/fireworks.js"></script>
+<script src="js/world/map-of-us.js"></script>
+<script src="js/world/outer-areas.js"></script>
+<script src="js/world/moments.js"></script>
+<script src="js/world/roadside.js"></script>
+<script src="js/world/telescope.js"></script>
+<script src="js/world/world-update.js"></script>
+<script src="js/world/games.js"></script>
+<script src="js/world/blockworld.js"></script>
+<script src="js/ui/panels.js"></script>
+<script src="js/core/optimize.js"></script>
+<script src="js/core/postfx.js"></script>
+<script src="js/ui/input.js"></script>
+<script src="js/game/state.js"></script>
+<script src="js/game/audio.js"></script>
+<script src="js/game/flow.js"></script>
+<script src="js/game/keepsakes.js"></script>
+<script src="js/game/achievements.js"></script>
+<script src="js/game/finale.js"></script>
+<script src="js/game/walking.js"></script>
+<script src="js/game/loop.js"></script>
+</body>
+</html>
